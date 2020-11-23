@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+}
+
+.App {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: baseline;
+    align-content: center;
+    margin-left: 5%;
+}
+
+.Header {
+    background-color: #cccccc;
+    margin: 0;
+    padding: 0;
+    height: 5vh;
+    display: flex;
+
+    select {
+        margin: 5px;
+        border-radius: 5px;
+    }
+
+    input {
+        margin: 5px;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    button {
+        margin: 5px;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+}
+
+.Card {
+    flex-basis: 15vw;
+    margin: 1%;
+    display: block;
+    border: 1px solid;
+    padding: 5px;
+    box-shadow: 2px 3px #888888;
+
+    &:hover {
+        background-color: #eeeeee;
+        box-shadow: 2px 4px #000000;
+    }
+}
+
+
+.Information {
+    text-align: center;
+    height: 21%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        margin: 0;
+        padding: 2px;
+    }
+}
+
+.Image {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 80%;
+
+    img {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .Card {
+        flex-basis: 29.5vw;
+    }
+
+    .Header {
+        flex-direction: column;
+        margin: 0;
+        height: 15vh;
+
+        select {
+            margin: 0;
+        }
+
+        input {
+            margin: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .Card {
+        flex-basis: 43vw;
+        box-shadow: none;
+    }
+}

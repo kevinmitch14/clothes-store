@@ -1,0 +1,90 @@
+.App {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+body {
+  margin: 0;
+}
+
+.Header {
+  /* background-color: #eeeeee; */
+  margin: 0;
+  padding: 0;
+  height: 50px;
+}
+
+.Header {
+  display: flex;
+}
+
+.Header select {
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.Header input {
+  margin: 5px;
+  border-radius: 5px;
+  color: rebeccapurple;
+}
+
+.Header p {
+  margin: 0;
+}
+
+.Card {
+  flex-basis: 21%;
+  margin: 1%;
+  /* border: 1px solid black; */
+  display: block;
+  border: 1px solid;
+  padding: 5px;
+  box-shadow: 2px 3px #888888;
+
+}
+
+.Card:hover {
+  background-color: #eeeeee;
+  box-shadow: 2px 4px #000000;
+}
+
+.Information {
+  text-align: center;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Information p {
+  margin: 0;
+  padding: 2px;
+}
+
+.Image {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 80%;
+}
+
+.Image img {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .Card {
+    flex-basis: 28%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .Card {
+    flex-basis: 98%;
+    box-shadow: none;
+  }
+}

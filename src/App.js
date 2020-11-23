@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import React from 'react'
+import Card from './Card'
+import data from './testing'
+import Header from './Header';
+import { useSelector } from 'react-redux'
 
-function App() {
+const App = () => {
+  const c = useSelector(state => state.data)
+  console.log(c)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Header
+        data={data}
+      />
+
+      <div className={"App"}>
+
+        <Card
+          data={data}
+        />
+
+      </div>
+    </>
+  )
 }
 
-export default App;
+export default App
